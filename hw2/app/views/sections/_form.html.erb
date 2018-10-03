@@ -27,6 +27,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :student_id %><br>
+    <%= f.collection_check_boxes(:student_ids, @students, :id, :name) %>
+  </div>
+
+  <div class="field">
     <%= f.label :room %>
     <%= f.text_field :room %>
   </div>

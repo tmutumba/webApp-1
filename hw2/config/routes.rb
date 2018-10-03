@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'welcome#index'
+
   resources :students
   resources :sections
   resources :courses
