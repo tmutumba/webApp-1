@@ -63,6 +63,12 @@ class SectionsController < ApplicationController
     end
   end
 
+  # SEARCH by Section name
+  def search
+    @sections = Section.where("semester like ?", "%#{params[:q]}%")
+    render :index
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_section
@@ -73,4 +79,5 @@ class SectionsController < ApplicationController
     def section_params
       params.require(:section).permit(:semester, :number, :course_id, :room, :student_ids => [])
     end
+
 end
