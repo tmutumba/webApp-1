@@ -21,8 +21,10 @@
 </p>
 
 <ol>
+  <strong>Sections:</strong>
+  <br><br>
 	<% @course.sections.each do |section| %>
-		<li> <%=section.course %>
+		<li> <%=section.semester%>, <%=section.room%>, Number: <%=section.number %>
 		<% end %>
 </ol>
 

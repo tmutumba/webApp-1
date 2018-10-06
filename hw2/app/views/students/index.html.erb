@@ -2,11 +2,11 @@
 
 <h1>Students</h1>
 
-<%= form_tag(search_courses_url, method: "get") do %>
+<%= form_tag(search_students_url, method: "get") do %>
   <%= label_tag(:q, "Search for student name:") %>
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
-<% end %>
+<% end %> <br>
 
 <table>
   <thead>
@@ -35,9 +35,3 @@
 <%= link_to 'Courses', "http://localhost:3000/courses" %>
 <%= link_to 'Sections', "http://localhost:3000/sections" %>
 
-<% form_tag students_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search]%>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
